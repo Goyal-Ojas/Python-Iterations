@@ -1,0 +1,18 @@
+# Question 3:
+
+# Given artist list
+artists = ['Weird Al', 'Bruno Mars', 'Ricky Martin', 'Juice Wrld', 'HP Boyz', 'James Blunt', 'Ne-Yo', 'Paul McCartney', 'Little River Band']
+
+# Given play counts in the same order as artists
+play_counts = [1234821, 85279, 600000, 38765432, 45000, 974545, 20000, 98879838, 100]
+
+# Create a dictionary matching artists with play counts
+artist_play_count = {}
+
+# Populate the dictionary by iterating through the artist list and play count
+for i, artist in enumerate(artists):
+  artist_play_count[artist] = play_counts[i]
+
+# Output the resulting dictionary
+for artist, plays in artist_play_count.items():
+  print(f"{artist} = {plays} plays")
