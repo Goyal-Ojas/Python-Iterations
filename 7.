@@ -1,0 +1,30 @@
+# Question 7
+
+# Given dictionaries for Isaac and Grays
+Isaac = {'fav_Artists': ['Little River Band', 'Jackson 5', 'HP Boyz', 'N-Yo']}
+Grays = {'fav_Artists': []}
+
+artist = ['Weird Al', 'Bruno Mars', 'Ricky Martin', 'Juice Wrld', 'HP Boyz', 'James Blunt', 'Ne-Yo', 'Paul McCartney', 'Little River Band', 'Jackson 5']
+play_count = [1234821, 85279, 600000, 38765432, 45000, 974545, 20000, 98879838, 100, 0]
+
+# Increment play counts by 100 for all artists
+play_count = [plays + 100 for plays in play_count]
+
+# Update Gray's preferred artists based on Isaac's list and all available artists
+for art in artist:
+    if art not in Isaac['fav_Artists']:
+        Grays['fav_Artists'].append(art)
+
+# Calculate total plays for Isaac's favourite artists
+isaac_total_plays = sum(play_count[artist.index(a)] for a in Isaac['fav_Artists'] if a in artist)
+
+# Calculate total plays for Grays' favourite artists
+grays_total_plays = sum(play_count[artist.index(a)] for a in Grays['fav_Artists'] if a in artist)
+
+# Insert total plays as a new key in Isaac's and Grays' dictionaries
+Isaac['all_plays'] = isaac_total_plays
+Grays['all_plays'] = grays_total_plays
+
+# Output updated Isaac's and Grays' dictionaries
+print("Isaac's dictionary with total plays:", Isaac)
+print("Grays' dictionary with total plays:", Grays)
