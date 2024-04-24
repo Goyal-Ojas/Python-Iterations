@@ -1,0 +1,5 @@
+# Question 2:
+artists = ['Weird Al', 'Bruno Mars', 'Ricky Martin', 'HP Boyz', 'James Blunt', 'Ne-Yo', 'Paul McCartney', 'Little River Band']
+artists.sort(reverse=True)
+artists.insert(2, 'Juice Wrld')
+print(artists)
