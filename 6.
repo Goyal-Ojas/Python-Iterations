@@ -1,0 +1,17 @@
+# Question 6:
+
+# Given dictionaries for Isaac and Grays
+Isaac = {'fav_Artists': ['Little River Band', 'Jackson 5', 'HP Boyz', 'N-Yo']}
+Grays = {'fav_Artists': []}
+
+# Given list of all available artists
+all_Artists = ['Weird Al', 'Bruno Mars', 'Ricky Martin', 'Juice Wrld', 'HP Boyz', 'James Blunt', 'Ne-Yo', 'Paul McCartney', 'Little River Band', 'Jackson 5']
+
+# Update Gray's preferred artists based on Isaac's list and all available artists
+for artists in all_Artists:
+  if artist not in Isaac['fav_Artists']:
+    Grays['fav_Artists'].append(artist)
+
+# Output Gray's and Isaac's preferred artists
+print("Grays' preferred artists:", Grays['fav_Artists'])
+print("Isaac's preferred artists:", Isaac['fav_Artists'])
